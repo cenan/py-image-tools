@@ -3,7 +3,7 @@
 import os
 import glob
 
-import Image
+from PIL import Image
 
 def main():
 	for infile in glob.glob("*.png"):
@@ -19,6 +19,6 @@ def main():
 		layer.paste(wm, position)
 		Image.composite(layer, im, layer).save('%s.wm.%s' % (f, ext))
 
-if __name__=="__main__":
+if __name__ == "__main__":
 	main()
 

@@ -11,6 +11,6 @@ def main():
 		im.crop((240,0,480,320)).save(file + ".2.jpg", "JPEG")
 		im.crop((480,0,720,320)).save(file + ".3.jpg", "JPEG")
 
-if __name__=="__main__":
+if __name__ == "__main__":
 	main()
 
