@@ -6,12 +6,12 @@ import glob
 from PIL import Image
 
 def main():
+	wm = Image.open('watermark.png')
 	for infile in glob.glob("*.png"):
 		f, ext = os.path.splitext(infile)
 		if f == "watermark":
 			continue
 		im = Image.open(infile)
-		wm = Image.open('watermark.png')
 		if im.mode != "RGBA":
 			im = im.convert("RGBA")
 		layer = Image.new("RGBA", im.size, (0,0,0,0))
