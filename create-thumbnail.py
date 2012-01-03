@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
-import glob, os
+import glob
+import os
 from PIL import Image
 
+
 def main():
-	for infile in glob.glob("*.jpg"):
-		file, ext = os.path.splitext(infile)
-		im = Image.open(infile)
-		im.thumbnail((200, 200), Image.ANTIALIAS)
-		im.save(file + ".thumb" + ext)
+    for infile in glob.glob("*.jpg"):
+        file, ext = os.path.splitext(infile)
+        im = Image.open(infile)
+        im.thumbnail((200, 200), Image.ANTIALIAS)
+        im.save(file + ".thumb" + ext)
 
 if __name__ == "__main__":
-	main()
-
+    main()

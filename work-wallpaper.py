@@ -5,6 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 WALLPAPER = '/home/cenan/Pictures/wallpaper.png'
 
+
 def main():
     im = Image.new('RGBA', (1920, 1080), (64, 64, 64, 255))
     draw = ImageDraw.Draw(im)
@@ -15,6 +16,4 @@ def main():
         os.system('pcmanfm --set-wallpaper "%s"' % WALLPAPER)
 
 if __name__ == "__main__":
-	main()
-
-
+    main()
